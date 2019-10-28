@@ -63,9 +63,9 @@ void AccountAPI::combinationUtil(std::vector<double> data, int start, int end, i
     {
         double sum = std::accumulate(data.begin(),data.end(),.00);
 
-        for (auto elem:data) {
-            std::cout<<elem<<"\t";
-        }
+        auto print = [](double& elem) { std::cout<<elem<<"\t"; };
+
+        std::for_each(data.begin(), data.end(), print);
         std::cout <<" = "<< sum << std::endl;
 
         if (sum == iBankTransfer)
@@ -101,7 +101,7 @@ void AccountAPI::combination(int n, int r)
 bool AccountAPI::findPaymentsGivingBankTransfer()
 {
 
-    /** @brief with n the number of elements in the sequence
+    /** @brief with n the number of elements in the sequence 
       */
     int n = static_cast<int> (iDuePaymentsList.size());
 
@@ -132,3 +132,5 @@ std::vector<double> AccountAPI::getPaymentsListGivingBankTransfer()
 {
     return IPaymentsListGivingBankTrasfer;
 }
+
+//possible enhancements: introduce a new support class in order to comply with the single responsability principle, add lambda functions
