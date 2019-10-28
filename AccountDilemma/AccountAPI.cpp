@@ -133,4 +133,4 @@ std::vector<double> AccountAPI::getPaymentsListGivingBankTransfer()
     return IPaymentsListGivingBankTrasfer;
 }
 
-//possible enhancements: introduce a new support class in order to comply with the single responsability principle, add lambda functions
+//possible enhancements: introduce a new support class in order to comply with the single responsability principle, add lambda functions aaa
