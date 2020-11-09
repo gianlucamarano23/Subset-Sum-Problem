@@ -29,7 +29,7 @@ void AccountAPI::printOUTFile(){
                        file<<payment<<"\n";
                 }
             } else {
-                file<<"No solution";
+                file<<"No solutionnn";
             std::cout<<"Unable to create output file"<<std::endl;
             }
             file.close();
